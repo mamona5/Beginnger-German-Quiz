@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">The Beginner German Quiz</string>
+
+    <string name="hint_name">Enter your name</string>
+    <string name="hint_email">Enter your Email address</string>
+    <string name="send_email">Email my result</string>
+    <string name="start_quiz">Start Quiz</string>
+    <string name="next">Next</string>
+    <string name="thank_you">Thanks for completing the quiz</string>
+    <string name="test_result">You scored * out of * correct!</string>
+
+
+    <string name="q1_question">Which article does the word “Fernkurs” (Long distance learning course) has in the nominative case?</string>
+    <string name="q1_a">der Fernkurs</string>
+    <string name="q1_b">die Fernkurs</string>
+    <string name="q1_c">das Fernkurs</string>
+    <string name="q2_question">Which article does the word “Kode” (code) has in the nominative case?</string>
+    <string name="q2_a">der Kode</string>
+    <string name="q2_b">die Kode</string>
+    <string name="q2_c">das Kode</string>
+    <string name="q3_question">Which article does the word “App” has in the nominative case?</string>
+    <string name="q3_a">der App</string>
+    <string name="q3_b">die App</string>
+    <string name="q3_c">das App</string>
+    <string name="q4_question">Which article does the word “Entwicklung” (development)  has in the nominative case?</string>
+    <string name="q4_a">der Entwicklung</string>
+    <string name="q4_b">die Entwicklung</string>
+    <string name="q4_c">das Entwicklung</string>
+    <string name="q5_question">What is “to google” in German?</string>
+    <string name="q5_a">Googeln</string>
+    <string name="q5_b">Googlen</string>
+    <string name="q5_c">Googlelen</string>
+
+    <string name="q1_correct_answer">a</string>
+    <string name="q2_correct_answer">b</string>
+    <string name="q3_correct_answer">b</string>
+    <string name="q4_correct_answer">b</string>
+    <string name="q5_correct_answer">a</string>
+    <string name="quiz">Quiz</string>
+    <string name="finished">Finished</string>
+    <string name="Summary">Summary</string>
+</resources>
