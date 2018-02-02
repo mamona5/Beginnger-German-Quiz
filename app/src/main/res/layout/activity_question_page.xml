@@ -41,7 +41,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:textSize = "24sp"
+                android:textSize = "@dimen/textLarge"
                 />
 
             <RadioButton
@@ -49,7 +49,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:textSize = "24sp"
+                android:textSize = "@dimen/textLarge"
                  />
 
             <RadioButton
@@ -57,7 +57,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="64dp"
-                android:textSize = "24sp"
+                android:textSize = "@dimen/textLarge"
                 />
         </RadioGroup>
 
