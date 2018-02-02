@@ -1,9 +1,9 @@
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">The Beginner German Quiz</string>
 
     <string name="hint_name">Enter your name</string>
     <string name="hint_email">Enter your Email address</string>
-    <string name="send_email">Email my result</string>
+    <string name="send_email">Send my Quiz results</string>
     <string name="start_quiz">Start Quiz</string>
     <string name="next">Next</string>
     <string name="thank_you">Thanks for completing the quiz</string>
@@ -39,4 +39,16 @@
     <string name="quiz">Quiz</string>
     <string name="finished">Finished</string>
     <string name="Summary">Summary</string>
+    <string name="german_tools">What tools are you using to learn German?</string>
+    <string name="german_tool_books">Books</string>
+    <string name="german_tool_face_classes">Attend face-to-face classes.</string>
+    <string name="german_tool_online_resources">Online Resources</string>
+    <string name="german_tool_user_input">Enter your favourite online resource.</string>
+    <string name="thank_you_message"><xliff:g id="name" example = "Peter">%s</xliff:g>, thank you for completing the Quiz.  \nYou have scored <xliff:g id="score" >%d</xliff:g> out of <xliff:g id="totalQ" example= "5" >%d</xliff:g>. </string>
+    <string name="quiz_result"><xliff:g id="name" example = "Peter">%s</xliff:g>, you have scored <xliff:g id="score" >%d</xliff:g> out of <xliff:g id="totalQ" example= "5" >%d</xliff:g>. </string>
+
+    <string name="others">Others</string>
+    <string name="germanReminder">Please choose at least one German learning tool.</string>
+    <string name="no_email">You must enter a valid Email Address.</string>
+    <string name="empty">It\'s empty. Please enter your name.</string>
 </resources>

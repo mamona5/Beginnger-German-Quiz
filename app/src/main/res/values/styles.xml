@@ -6,10 +6,8 @@
         <item name="colorPrimary">#CDDC39</item>
         <item name="colorPrimaryDark">#827717</item>
         <item name="colorAccent">#AEEA00</item>
+
+
+
     </style>
-
-    <dimen name = "textNormal">16sp</dimen>
-    <dimen name = "textLarge">24sp</dimen>
-
-
 </resources>

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -13,26 +14,20 @@ import android.widget.Toast;
 
 public class question_page extends AppCompatActivity {
 
-
     /* Change value of TotalQ when number of questions changes*/
     int totalQ = 5;
     int score = 0;
     int questionNumber = 1;
-    String correctAnswer ;
+    String correctAnswer;
     String userName;
 
-        @Override
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question_page);
         updateValues();
-
-            /*Bundle extras = getIntent().getExtras();
-            userName = extras.getString("Name");
-            */
-            Intent launchQuiz= getIntent();
-            userName = launchQuiz.getStringExtra("Name");
-
+        Intent launchQuiz = getIntent();
+        userName = launchQuiz.getStringExtra("Name");
     }
 
     /*Restore values if system destroys the activity due to system constraints (rather than normal app behavior) ie screen orientation
@@ -48,7 +43,7 @@ public class question_page extends AppCompatActivity {
             questionNumber = 5;
         }
         updateValues();
-            }
+    }
 
     /*Save  values if system destroys the activity due to system constraints (rather than normal app behavior) ie screen orientation.
 *
@@ -83,22 +78,23 @@ public class question_page extends AppCompatActivity {
         int resIDOptionC = getResources().getIdentifier(mOptionC, "string", getPackageName());
         int resIDCorrectAnswer = getResources().getIdentifier(mCorrectAnswer, "string", getPackageName());
 
+        RadioGroup mc = findViewById(R.id.mc);
+        mc.clearCheck();
+
         optionA.setText(getText(resIDOptionA).toString());
         optionB.setText(getText(resIDOptionB).toString());
         optionC.setText(getText(resIDOptionC).toString());
         question.setText(getText(resIDQuestion).toString());
 
         correctAnswer = getText(resIDCorrectAnswer).toString();
-
     }
 
     /*This method is called when the next button on quiz page is clicked
 *
 * */
     public void checkAnswers(View view) {
-
         if (questionNumber <= totalQ) {
-           if (correctAnswer.equals("a")) {
+            if (correctAnswer.equals("a")) {
                 Boolean clickedA = ((RadioButton) findViewById(R.id.placeholder_a)).isChecked();
                 if (clickedA) {
                     score += 1;
@@ -120,23 +116,20 @@ public class question_page extends AppCompatActivity {
                 Button clickFinish = (findViewById(R.id.next));
                 clickFinish.setText(R.string.finished);
             }
-            RadioGroup mc = findViewById(R.id.mc);
-            mc.clearCheck();
             questionNumber += 1;
             if (questionNumber <= totalQ) {
                 updateValues();
             } else {
-                Toast.makeText(this, "You scored " + score + " out of " + totalQ +"." , Toast.LENGTH_SHORT).show();
-                  Intent launchSummary = new Intent(this, Summary.class);
-                  launchSummary.putExtra("Total Question", totalQ);
-                  launchSummary.putExtra("Name", userName);
-                  launchSummary.putExtra("Score",score);
-                  startActivity(launchSummary);
-
-                }
+                Toast.makeText(this, getString(R.string.quiz_result, userName, score, totalQ), Toast.LENGTH_SHORT).show();
+                Intent launchSummary = new Intent(this, Summary.class);
+                launchSummary.putExtra("Total Question", totalQ);
+                launchSummary.putExtra("Name", userName);
+                launchSummary.putExtra("Score", score);
+                startActivity(launchSummary);
             }
         }
     }
+}
 
 
 

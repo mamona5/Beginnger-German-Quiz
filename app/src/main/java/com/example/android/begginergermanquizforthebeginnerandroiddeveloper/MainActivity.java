@@ -22,13 +22,14 @@ public class MainActivity extends AppCompatActivity {
         EditText getUserName = findViewById(R.id.user_name);
         Editable userNameEditable = getUserName.getText();
         String userName = userNameEditable.toString();
-        /*if (userName.trim().length() <= 0) {
-            Toast.makeText(MainActivity.this, "It's empty", Toast.LENGTH_SHORT).show();
+        if (userName.trim().length() <= 0) {
+            Toast.makeText(MainActivity.this, getString(R.string.empty), Toast.LENGTH_SHORT).show();
         } else {
-            */
-        Intent launchQuiz = new Intent(this, question_page.class);
-           launchQuiz.putExtra("Name", userName);
+
+            Intent launchQuiz = new Intent(this, question_page.class);
+            launchQuiz.putExtra("Name", userName);
             startActivity(launchQuiz);
 
+        }
     }
 }

@@ -1,45 +1,104 @@
-<LinearLayout        xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/test_result"
-        android:textSize="24sp"
-        android:padding="16dp"
-        android:layout_margin="16dp"/>
+        android:layout_marginEnd="@dimen/paddingExtraLarge"
+        android:layout_marginLeft="@dimen/paddingExtraLarge"
+        android:layout_marginRight="@dimen/paddingLarge"
+        android:layout_marginStart="@dimen/paddingExtraLarge"
+        android:layout_marginTop="@dimen/paddingLarge"
+        android:text="Thank you"
+        android:textSize="@dimen/textNormal" />
 
+    <TextView
+        android:id="@+id/german_tool"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/paddingExtraLarge"
+        android:layout_marginStart="@dimen/paddingExtraLarge"
+        android:layout_marginTop="@dimen/paddingLarge"
+        android:text="@string/german_tools"
+        android:textSize="@dimen/textNormal" />
+
+    <CheckBox
+        android:id="@+id/books"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/paddingExtraLarge"
+        android:layout_marginStart="@dimen/paddingExtraLarge"
+        android:text="@string/german_tool_books" />
+
+    <CheckBox
+        android:id="@+id/face_to_face"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/paddingExtraLarge"
+        android:layout_marginStart="@dimen/paddingExtraLarge"
+        android:text="@string/german_tool_face_classes" />
+
+    <CheckBox
+        android:id="@+id/online"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/paddingExtraLarge"
+        android:layout_marginStart="@dimen/paddingExtraLarge"
+        android:text="@string/german_tool_online_resources" />
+
+    <CheckBox
+        android:id="@+id/others"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/paddingExtraLarge"
+        android:layout_marginStart="@dimen/paddingExtraLarge"
+        android:text="@string/others" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="@dimen/paddingLarge"
+        android:background="@color/colorPrimary" />
 
     <EditText
         android:id="@+id/Email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/hint_email"
-        android:textAllCaps="true"
         android:layout_marginLeft="32dp"
         android:layout_marginRight="32dp"
-        android:layout_marginTop="16dp"/>
+
+        android:hint="@string/hint_email"
+        android:inputType="textEmailAddress"
+        android:textAllCaps="true"
+        android:textSize="@dimen/textNormal" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/send_email"
         android:layout_marginLeft="32dp"
         android:layout_marginRight="32dp"
         android:layout_marginTop="16dp"
-        android:textSize="@dimen/textNormal"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/button"
-        android:onClick="sendEmail"/>
+        android:onClick="sendEmail"
+        android:text="@string/send_email"
+        android:textSize="@dimen/textNormal" />
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/merkel"
-        />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/merkel" />
 
 </LinearLayout>
+
+</ScrollView>
