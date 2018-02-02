@@ -17,7 +17,6 @@ import org.w3c.dom.Text;
 
 public class Summary extends AppCompatActivity {
     String message;
-    private static final String TAG = "MyActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,12 +38,10 @@ public class Summary extends AppCompatActivity {
      * @param totalQ   is the total number of question from question_page
      */
     public void displayMessage(String userName, int score, int totalQ) {
-                     TextView printMessage = findViewById(R.id.message);
-        Log.v(TAG, "LALALALLALALALA");
-                     message = getString(R.string.thank_you_message, userName, score, totalQ);
-                     printMessage.setText(message);
-                     }
-
+        TextView printMessage = findViewById(R.id.message);
+        message = getString(R.string.thank_you_message, userName, score, totalQ);
+        printMessage.setText(message);
+    }
 
     /* This method is called when the Send Email button is clicked
      */
@@ -53,13 +50,9 @@ public class Summary extends AppCompatActivity {
         Editable userEmailEditable = getUserEmail.getText();
         String userEmail = userEmailEditable.toString();
 
-        String germanReminderMessage = checkGermanUserInput();
-
-        if (germanReminderMessage != null) {
-            Toast.makeText(this, germanReminderMessage + getString(R.string.no_email), Toast.LENGTH_SHORT).show();
-        }else if (userEmail.trim().length() <= 0) {
+        if (userEmail.trim().length() <= 0) {
             Toast.makeText(this, getString(R.string.no_email), Toast.LENGTH_SHORT).show();
-        }  else {
+        } else {
             Intent intent = new Intent(Intent.ACTION_SENDTO);
             intent.setData(Uri.parse("mailto:")); // only email apps should handle this
             intent.putExtra(Intent.EXTRA_EMAIL, userEmail);
@@ -70,27 +63,6 @@ public class Summary extends AppCompatActivity {
             }
         }
     }
-
-    public String checkGermanUserInput() {
-        String germanReminder;
-        CheckBox checkedBooks = findViewById(R.id.books);
-        boolean books = checkedBooks.isChecked();
-        CheckBox checkedFaceToFace = findViewById(R.id.face_to_face);
-        boolean faceToFace = checkedFaceToFace.isChecked();
-        CheckBox checkedOnline = findViewById(R.id.online);
-        boolean online = checkedOnline.isChecked();
-        CheckBox checkedOthers = findViewById(R.id.others);
-        boolean others = checkedOthers.isChecked();
-        if (books || faceToFace || online || others) {
-            germanReminder = null;
-        } else {
-            germanReminder = getString(R.string.germanReminder);
-
-        }
-        return germanReminder;
-    }
-
-
 }
 
 

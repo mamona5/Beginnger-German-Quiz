@@ -121,6 +121,7 @@ public class question_page extends AppCompatActivity {
                 updateValues();
             } else {
                 Toast.makeText(this, getString(R.string.quiz_result, userName, score, totalQ), Toast.LENGTH_SHORT).show();
+
                 Intent launchSummary = new Intent(this, Summary.class);
                 launchSummary.putExtra("Total Question", totalQ);
                 launchSummary.putExtra("Name", userName);

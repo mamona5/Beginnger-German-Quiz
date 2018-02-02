@@ -22,7 +22,50 @@
             android:textAllCaps="true"
             android:layout_marginLeft="@dimen/paddingExtraLarge"
             android:layout_marginRight="@dimen/paddingExtraLarge"
-            android:layout_marginTop="@dimen/paddingExtraLarge">
+            android:layout_marginTop="@dimen/paddingExtraLarge"/>
+
+        <TextView
+            android:id="@+id/german_tool"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/paddingExtraLarge"
+            android:layout_marginStart="@dimen/paddingExtraLarge"
+            android:layout_marginTop="@dimen/paddingExtraLarge"
+            android:text="@string/german_tools"
+            android:textSize="@dimen/textNormal" />
+
+        <CheckBox
+            android:id="@+id/books"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/paddingExtraLarge"
+            android:layout_marginStart="@dimen/paddingExtraLarge"
+            android:text="@string/german_tool_books" />
+
+        <CheckBox
+            android:id="@+id/face_to_face"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/paddingExtraLarge"
+            android:layout_marginStart="@dimen/paddingExtraLarge"
+            android:text="@string/german_tool_face_classes" />
+
+        <CheckBox
+            android:id="@+id/online"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/paddingExtraLarge"
+            android:layout_marginStart="@dimen/paddingExtraLarge"
+            android:text="@string/german_tool_online_resources" />
+
+        <CheckBox
+            android:id="@+id/others"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/paddingExtraLarge"
+            android:layout_marginStart="@dimen/paddingExtraLarge"
+            android:text="@string/others" />
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
