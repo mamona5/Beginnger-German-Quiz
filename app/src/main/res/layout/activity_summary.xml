@@ -17,7 +17,6 @@
         android:layout_marginRight="@dimen/paddingLarge"
         android:layout_marginStart="@dimen/paddingExtraLarge"
         android:layout_marginTop="@dimen/paddingLarge"
-        android:text="Thank you"
         android:textSize="@dimen/textNormal" />
 
     <TextView
@@ -73,8 +72,8 @@
         android:id="@+id/Email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"
+        android:layout_marginLeft="@dimen/paddingExtraLarge"
+        android:layout_marginRight="@dimen/paddingExtraLarge"
 
         android:hint="@string/hint_email"
         android:inputType="textEmailAddress"
@@ -84,10 +83,10 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="@dimen/paddingExtraLarge"
+        android:layout_marginRight="@dimen/paddingExtraLarge"
+        android:layout_marginTop="@dimen/paddingNormal"
+        android:layout_marginBottom="@dimen/paddingNormal"
         android:background="@drawable/button"
         android:onClick="sendEmail"
         android:text="@string/send_email"
